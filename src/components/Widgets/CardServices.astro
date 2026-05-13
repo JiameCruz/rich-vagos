@@ -1,0 +1,20 @@
+---
+const services = [
+	{ title: "Lavado interior y exterior", description: "kalsdkasdklas" },
+	{ title: "Lavado motor", description: "Degreasing seguro para componentes sensibles." },
+	{ title: "Detallado cabina", description: "Interior impecable para entrega o revisión." },
+    { title: "Lavado interior y exterior", description: "kalsdkasdklas" },
+	{ title: "Lavado motor", description: "Degreasing seguro para componentes sensibles." },
+	{ title: "Detallado cabina", description: "Interior impecable para entrega o revisión." },
+];
+---
+
+{
+	services.map((item) => (
+		<div class="h-40 w-full rounded-tr-3xl bg-red-500 p-4 text-white shadow-2xl 
+         hover:bg-black duration-300 tracking-normal">
+			<h3 class="font-semibold text-3xl">{item.title}</h3>
+			<p class="mt-2 text-sm opacity-90">{item.description}</p>
+		</div>
+	))
+}
