@@ -3,56 +3,118 @@ import CardPrice from "../Widgets/CardPrice.astro";
 import CTA from "../Widgets/CTA.astro";
 ---
 
-<section class="w-full px-4 py-12">
-  <div class="flex justify-center mb-8">
-    <h2 class="flex text-4xl font-bold tracking-tight">Precios</h2>
-  </div>
-  <div class="grid grid-cols-1 mt-3 gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-10">
-    <CardPrice />
-  </div>
-  <div>
+<section
+  id="precios"
+  class="w-full px-6 py-32 bg-zinc-50 border-t border-zinc-100 overflow-hidden"
+>
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
     <div
-      class="flex flex-col-reverse mb-6 md:flex-row justify-between mx-auto w-full md:w-9/10 h-auto md:h-60 rounded-tl-4xl relative border-2 border-red-500
-         shadow-2xl transform hover:border-black hover:scale-102 duration-300 p-6 md:p-10"
+      class="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 relative"
     >
-      <div class="flex flex-col justify-center items-center md:items-start">
-        <p class="text-5xl md:text-7xl font-bold text-red-500 mb-4 md:mb-0">
-          $900
-        </p>
-        <CTA>Comprar</CTA>
-      </div>
-      <div
-        class="flex flex-col justify-center items-center md:items-end mb-6 md:mb-0"
+      <span
+        class="absolute -left-20 -top-20 text-[15rem] font-black text-zinc-100/50 -z-10 select-none"
+        >PRICES</span
       >
-        <h2
-          class="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-right"
+      <div class="space-y-4">
+        <span
+          class="text-red-600 font-black uppercase tracking-[0.3em] text-xs block"
+          >Tarifas Transparentes</span
         >
-          Combo Básico
+        <h2
+          class="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8]"
+        >
+          Precios <br />
+          <span class="text-red-600">Directos</span>
         </h2>
-        <p class="text-lg md:text-3xl mt-2 text-center md:text-right">
-          Lavado Exterior + Caja
+      </div>
+      <div class="space-y-6 max-w-sm">
+        <p class="text-zinc-500 font-medium text-xl leading-tight">
+          Sin sorpresas. Solo el mejor servicio de lavado para tu trailer con
+          precios competitivos.
         </p>
+        <div class="h-1 w-24 bg-red-600"></div>
       </div>
     </div>
-    <div
-      class="flex flex-col-reverse md:flex-row justify-between mx-auto w-full md:w-9/10 h-auto md:h-60 rounded-tr-4xl
-      border-2 border-red-500 shadow-2xl transform hover:border-black hover:scale-102 duration-300 p-6 md:p-10"
-    >
-      <div class="flex flex-col mb-6 md:mb-0">
-        <h2
-          class="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-left"
+
+    <!-- Individual Prices Grid -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-32">
+      <CardPrice />
+    </div>
+
+    <!-- Featured Combos -->
+    <div class="space-y-12">
+      <h3 class="text-3xl font-black uppercase italic tracking-tighter">
+        Promociones <span class="text-red-600">Rich</span>
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Combo Básico -->
+        <div
+          class="group relative bg-white border border-zinc-200 p-10 flex flex-col justify-between min-h-[400px] hover:bg-zinc-950 transition-all duration-700 overflow-hidden"
         >
-          Combo Completo
-        </h2>
-        <p class="text-lg md:text-3xl mt-2 text-center md:text-right">
-          Lavado Exterior + Lavado Interior + Caja
-        </p>
-      </div>
-      <div class="flex flex-col justify-center items-center md:items-start">
-        <p class="text-5xl md:text-7xl font-bold text-red-500 mb-4 md:mb-0">
-          $1,500
-        </p>
-        <CTA>Comprar</CTA>
+          <span
+            class="absolute -right-10 -top-10 text-[10rem] font-black text-zinc-50 group-hover:text-zinc-900 transition-colors duration-500 italic"
+            >01</span
+          >
+
+          <div class="relative z-10">
+            <h4
+              class="text-4xl font-black uppercase tracking-tighter group-hover:text-white transition-colors duration-500"
+            >
+              Combo Básico
+            </h4>
+            <p class="text-xl text-zinc-500 group-hover:text-zinc-400 mt-2">
+              Lavado Exterior + Caja
+            </p>
+          </div>
+
+          <div class="relative z-10 flex items-baseline gap-4 mt-auto">
+            <span class="text-6xl font-black text-red-600">$900</span>
+            <span
+              class="text-zinc-400 font-bold uppercase tracking-widest text-sm"
+              >MXN</span
+            >
+            <div class="ml-auto">
+              <CTA>Reservar Ahora</CTA>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo Completo -->
+        <div
+          class="group relative bg-red-600 p-10 flex flex-col justify-between min-h-[400px] hover:bg-zinc-950 transition-all duration-700 overflow-hidden border border-red-500"
+        >
+          <span
+            class="absolute -right-10 -top-10 text-[10rem] font-black text-red-700 group-hover:text-zinc-900 transition-colors duration-500 italic"
+            >02</span
+          >
+
+          <div class="relative z-10">
+            <h4
+              class="text-4xl font-black uppercase tracking-tighter text-white"
+            >
+              Combo Completo
+            </h4>
+            <p class="text-xl text-red-100 group-hover:text-zinc-400 mt-2">
+              Lavado Exterior + Lavado Interior + Caja
+            </p>
+          </div>
+
+          <div class="relative z-10 flex items-baseline gap-4 mt-auto">
+            <span
+              class="text-6xl font-black text-white group-hover:text-red-600 transition-colors duration-500"
+              >$1,500</span
+            >
+            <span
+              class="text-red-200 group-hover:text-zinc-500 font-bold uppercase tracking-widest text-sm transition-colors duration-500"
+              >MXN</span
+            >
+            <div class="ml-auto">
+              <CTA>Reservar Ahora</CTA>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

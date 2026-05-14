@@ -1,0 +1,44 @@
+---
+import CardBeneficios from "../Widgets/CardBeneficios.astro";
+---
+
+<section
+  id="beneficios"
+  class="w-full px-6 py-32 bg-zinc-950 border-t border-zinc-900 overflow-hidden"
+>
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 relative"
+    >
+      <span
+        class="absolute -right-20 -top-20 text-[15rem] font-black text-zinc-900/50 -z-10 select-none"
+        >VAGOS</span
+      >
+      <div class="space-y-4">
+        <span
+          class="text-red-600 font-black uppercase tracking-[0.3em] text-xs block"
+          >Lealtad y Confianza</span
+        >
+        <h2
+          class="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8] text-white"
+        >
+          Beneficios <br />
+          <span class="text-red-600">Exclusivos</span>
+        </h2>
+      </div>
+      <div class="space-y-6 max-w-sm">
+        <p class="text-zinc-400 font-medium text-xl leading-tight">
+          Más que un lavado, una experiencia premium. Descubre lo que significa
+          ser parte de la familia Rich Vagos.
+        </p>
+        <div class="h-1 w-24 bg-red-600"></div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <CardBeneficios />
+    </div>
+  </div>
+</section>

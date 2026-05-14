@@ -1,0 +1,45 @@
+---
+const beneficios = [
+  {
+    titulo: "Atención 24/7",
+    desc: "Estamos listos cuando tú lo estés.",
+  },
+  {
+    titulo: "Zona VIP",
+    desc: "Espera con comodidad y estilo.",
+  },
+  {
+    titulo: "Facturación",
+    desc: "Procesos rápidos y sin complicaciones.",
+  },
+  {
+    titulo: "Garantía",
+    desc: "Si no brilla, lo volvemos a lavar.",
+  },
+];
+---
+
+{
+  beneficios.map((item) => (
+    <div
+      class="group relative h-64 bg-zinc-900 border border-zinc-800 p-8 flex flex-col justify-end hover:bg-red-600 transition-all duration-500 cursor-default overflow-hidden"
+    >
+      <!-- Accent Icon/Shape -->
+      <div class="absolute top-6 left-6 w-8 h-1 bg-red-600 group-hover:bg-white transition-colors duration-500"></div>
+      
+      <div class="relative z-10 space-y-2">
+        <h3 class="font-black text-2xl uppercase tracking-tighter text-white group-hover:scale-105 transition-transform duration-500 origin-left">
+          {item.titulo}
+        </h3>
+        <p class="text-zinc-500 text-sm font-medium group-hover:text-red-50 transition-colors duration-500">
+          {item.desc}
+        </p>
+      </div>
+
+      <!-- Street Texture / Decoration -->
+      <div class="absolute -right-4 -top-4 text-6xl font-black text-zinc-800/20 group-hover:text-white/10 transition-colors duration-500 select-none uppercase italic">
+        RICH
+      </div>
+    </div>
+  ))
+}

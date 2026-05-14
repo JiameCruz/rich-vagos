@@ -2,25 +2,19 @@
 import CTA from "./CTA.astro";
 const precios = [
   {
-    title: "Lavado Exterior de Trailer",
-    precio: " $330",
-    p1: "Alta presión",
-    p2: "Eliminación de suciedad pesada",
-    p3: "Enjuague completo",
+    title: "Lavado Exterior",
+    precio: "330",
+    features: ["Alta presión", "Eliminación de suciedad pesada", "Enjuague completo"],
   },
   {
-    title: "Lavado Exterior de Trailer",
-    precio: " $330",
-    p1: "Alta presión",
-    p2: "Eliminación de suciedad pesada",
-    p3: "Enjuague completo",
+    title: "Lavado Motor",
+    precio: "450",
+    features: ["Desengrasado técnico", "Protección de sensores", "Acabado brillante"],
   },
   {
-    title: "Lavado Exterior de Trailer",
-    precio: " $330",
-    p1: "Alta presión",
-    p2: "Eliminación de suciedad pesada",
-    p3: "Enjuague completo",
+    title: "Detallado Cabina",
+    precio: "600",
+    features: ["Aspirado profundo", "Sanitización superficies", "Restauración vinilos"],
   },
 ];
 ---
@@ -28,21 +22,30 @@ const precios = [
 {
   precios.map((item) => (
     <div
-      class="h-120 w-full rounded-tr-3xl p-4 mb-10 border-2 border-red-500
-         shadow-2xl transform hover:-translate-y-6 hover:border-black duration-300"
+      class="group relative bg-white border border-zinc-100 p-8 flex flex-col hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
     >
-      <div class="flex justify-center ">
-        <h3 class="font-bold text-3xl">{item.title}</h3>
+      <!-- Price Watermark -->
+      <div class="flex justify-between items-start mb-12">
+        <h3 class="font-black text-2xl uppercase tracking-tighter leading-tight max-w-[120px]">
+          {item.title}
+        </h3>
+        <div class="flex flex-col items-end">
+          <span class="text-4xl font-black text-red-600">${item.precio}</span>
+          <span class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">MXN</span>
+        </div>
       </div>
-      <div class="flex justify-center pt-10">
-        <p class="font-bold text-red-500 text-8xl">{item.precio}</p>
+
+      <div class="space-y-4 mb-12">
+        {item.features.map((feature) => (
+          <div class="flex items-center gap-3">
+            <div class="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+            <p class="text-zinc-600 font-medium text-sm">{feature}</p>
+          </div>
+        ))}
       </div>
-      <div class="gap-2 mt-10">
-        <p class="mb-4 font-semibold text-2xl">{item.p1}</p>
-        <p class="mb-4 font-semibold text-2xl">{item.p2}</p>
-        <p class="mb-4 font-semibold text-2xl">{item.p3}</p>
-      </div>
-      <div class="flex justify-center">
+
+      <div class="mt-auto pt-6 border-t border-zinc-100 flex justify-between items-center">
+        <span class="text-[10px] font-black text-zinc-300 uppercase tracking-[0.2em]">Rich Vagos Quality</span>
         <CTA>Comprar</CTA>
       </div>
     </div>

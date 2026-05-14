@@ -1,34 +1,65 @@
 ---
 const services = [
-  { title: "Lavado interior y exterior", description: "kalsdkasdklas" },
-  {
-    title: "Lavado motor",
-    description: "Degreasing seguro para componentes sensibles.",
+  { 
+    title: "Lavado Integral", 
+    description: "Limpieza profunda de interiores y exteriores con acabado espejo.",
+    icon: "truck" 
   },
   {
-    title: "Detallado cabina",
-    description: "Interior impecable para entrega o revisión.",
-  },
-  { title: "Lavado interior y exterior", description: "kalsdkasdklas" },
-  {
-    title: "Lavado motor",
-    description: "Degreasing seguro para componentes sensibles.",
+    title: "Limpieza de Motor",
+    description: "Desengrasado seguro para componentes sensibles y mayor vida útil.",
+    icon: "engine"
   },
   {
-    title: "Detallado cabina",
-    description: "Interior impecable para entrega o revisión.",
+    title: "Detallado Cabina",
+    description: "Desinfección y restauración de plásticos para un ambiente premium.",
+    icon: "cabin"
+  },
+  { 
+    title: "Lavado Chasis", 
+    description: "Eliminación de corrosión y suciedad acumulada en la base.",
+    icon: "chassis"
+  },
+  {
+    title: "Pulido Pintura",
+    description: "Eliminación de rayas y restauración del brillo original.",
+    icon: "polish"
+  },
+  {
+    title: "Sanitización",
+    description: "Eliminación de olores y bacterias con ozono de grado médico.",
+    icon: "clean"
   },
 ];
 ---
 
 {
-  services.map((item) => (
+  services.map((item, index) => (
     <div
-      class="h-40 w-full rounded-tr-3xl bg-red-500 p-4 text-white shadow-2xl transform  
-         hover:bg-black hover:scale-95 duration-300 tracking-normal"
+      class="group relative overflow-hidden bg-zinc-50 border border-zinc-100 p-8 hover:bg-zinc-950 transition-all duration-500 aspect-square flex flex-col justify-between"
     >
-      <h3 class="font-semibold text-3xl">{item.title}</h3>
-      <p class="mt-2 text-sm opacity-90">{item.description}</p>
+      <!-- Background Text / Number -->
+      <span class="absolute -right-4 -bottom-8 text-[12rem] font-black text-zinc-100 group-hover:text-zinc-900 transition-colors duration-500 leading-none">
+        0{index + 1}
+      </span>
+
+      <div class="relative z-10 space-y-6">
+        <div class="w-12 h-12 bg-red-600 flex items-center justify-center rounded-sm group-hover:scale-110 transition-transform duration-500">
+           <!-- Generic Icon Placeholder -->
+           <div class="w-6 h-6 border-2 border-white rounded-full"></div>
+        </div>
+        
+        <h3 class="font-black text-3xl uppercase tracking-tighter leading-none group-hover:text-white transition-colors duration-500">
+          {item.title}
+        </h3>
+      </div>
+
+      <div class="relative z-10">
+        <p class="text-zinc-500 font-medium group-hover:text-zinc-400 transition-colors duration-500 max-w-[200px]">
+          {item.description}
+        </p>
+        <div class="mt-6 w-0 group-hover:w-full h-1 bg-red-600 transition-all duration-700"></div>
+      </div>
     </div>
   ))
 }
