@@ -1,0 +1,50 @@
+---
+import CTA from "./CTA.astro";
+const precios = [
+  {
+    title: "Lavado Exterior de Trailer",
+    precio: " $330",
+    p1: "Alta presión",
+    p2: "Eliminación de suciedad pesada",
+    p3: "Enjuague completo",
+  },
+  {
+    title: "Lavado Exterior de Trailer",
+    precio: " $330",
+    p1: "Alta presión",
+    p2: "Eliminación de suciedad pesada",
+    p3: "Enjuague completo",
+  },
+  {
+    title: "Lavado Exterior de Trailer",
+    precio: " $330",
+    p1: "Alta presión",
+    p2: "Eliminación de suciedad pesada",
+    p3: "Enjuague completo",
+  },
+];
+---
+
+{
+  precios.map((item) => (
+    <div
+      class="h-120 w-full rounded-tr-3xl p-4 mb-10 border-2 border-red-500
+         shadow-2xl transform hover:-translate-y-6 hover:border-black duration-300"
+    >
+      <div class="flex justify-center ">
+        <h3 class="font-bold text-3xl">{item.title}</h3>
+      </div>
+      <div class="flex justify-center pt-10">
+        <p class="font-bold text-red-500 text-8xl">{item.precio}</p>
+      </div>
+      <div class="gap-2 mt-10">
+        <p class="mb-4 font-semibold text-2xl">{item.p1}</p>
+        <p class="mb-4 font-semibold text-2xl">{item.p2}</p>
+        <p class="mb-4 font-semibold text-2xl">{item.p3}</p>
+      </div>
+      <div class="flex justify-center">
+        <CTA>Comprar</CTA>
+      </div>
+    </div>
+  ))
+}

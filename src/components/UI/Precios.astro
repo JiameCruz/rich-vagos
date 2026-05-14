@@ -1,0 +1,59 @@
+---
+import CardPrice from "../Widgets/CardPrice.astro";
+import CTA from "../Widgets/CTA.astro";
+---
+
+<section class="w-full px-4 py-12">
+  <div class="flex justify-center mb-8">
+    <h2 class="flex text-4xl font-bold tracking-tight">Precios</h2>
+  </div>
+  <div class="grid grid-cols-1 mt-3 gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-10">
+    <CardPrice />
+  </div>
+  <div>
+    <div
+      class="flex flex-col-reverse mb-6 md:flex-row justify-between mx-auto w-full md:w-9/10 h-auto md:h-60 rounded-tl-4xl relative border-2 border-red-500
+         shadow-2xl transform hover:border-black hover:scale-102 duration-300 p-6 md:p-10"
+    >
+      <div class="flex flex-col justify-center items-center md:items-start">
+        <p class="text-5xl md:text-7xl font-bold text-red-500 mb-4 md:mb-0">
+          $900
+        </p>
+        <CTA>Comprar</CTA>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center md:items-end mb-6 md:mb-0"
+      >
+        <h2
+          class="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-right"
+        >
+          Combo Básico
+        </h2>
+        <p class="text-lg md:text-3xl mt-2 text-center md:text-right">
+          Lavado Exterior + Caja
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex flex-col-reverse md:flex-row justify-between mx-auto w-full md:w-9/10 h-auto md:h-60 rounded-tr-4xl
+      border-2 border-red-500 shadow-2xl transform hover:border-black hover:scale-102 duration-300 p-6 md:p-10"
+    >
+      <div class="flex flex-col mb-6 md:mb-0">
+        <h2
+          class="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-left"
+        >
+          Combo Completo
+        </h2>
+        <p class="text-lg md:text-3xl mt-2 text-center md:text-right">
+          Lavado Exterior + Lavado Interior + Caja
+        </p>
+      </div>
+      <div class="flex flex-col justify-center items-center md:items-start">
+        <p class="text-5xl md:text-7xl font-bold text-red-500 mb-4 md:mb-0">
+          $1,500
+        </p>
+        <CTA>Comprar</CTA>
+      </div>
+    </div>
+  </div>
+</section>
