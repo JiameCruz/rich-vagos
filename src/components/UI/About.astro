@@ -1,13 +1,63 @@
 ---
-
+import { Content, frontmatter } from "../MD/About.md";
 ---
 
-<section id="nosotros" class="w-full px-4 py-12">
-  <div class="flex justify-center">
-    <h2 class="flex text-4xl font-bold tracking-tigh">Sobre la Empresa</h2>
-  </div>
-  <div class="flex justify-between m-4">
-    <article class="">nckjashcdaskjlhdnkoashdkj</article>
-    <img src="lol.png" alt="AboutImage" class="h-full w-1/2 shadow-md" />
+<section
+  id="nosotros"
+  class="w-full px-6 py-32 bg-white overflow-hidden relative"
+>
+  <!-- Decorative Watermark -->
+  <span
+    class="absolute -left-10 top-20 text-[18rem] font-black text-zinc-50 select-none leading-none italic uppercase"
+  >
+    NOSOTROS
+  </span>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <!-- Image Side -->
+      <div class="relative group">
+        <!-- Accent Boxes -->
+        <div
+          class="absolute -top-6 -left-6 w-32 h-32 border-4 border-red-600 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"
+        >
+        </div>
+        <div
+          class="absolute -bottom-6 -right-6 w-32 h-32 bg-zinc-100 -z-10 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-500"
+        >
+        </div>
+
+        <div class="overflow-hidden bg-zinc-900 aspect-4/5 shadow-2xl">
+          <img
+            src="/about.webp"
+            alt="About Rich Vagos"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-90"
+          />
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div class="space-y-12">
+        <div class="space-y-4">
+          <span
+            class="text-red-600 font-black uppercase tracking-[0.3em] text-xs block"
+            >Identidad y Respeto</span
+          >
+          <h2
+            class="text-6xl md:text-8xl font-black text-black tracking-tighter uppercase italic"
+          >
+            {frontmatter.title.split(" ")[0]}
+            <br />
+            <span class="text-red-600">{frontmatter.title.split(" ")[1]}</span>
+          </h2>
+        </div>S
+
+        <div
+          class="prose prose-xl prose-zinc text-gray-800 font-semibold text-justify prose-headings:text-black prose-headings:font-black prose-headings:italic prose-headings:uppercase prose-headings:tracking-tighter prose-li:marker:text-red-600"
+        >
+          <Content />
+        </div>
+      </div>
+    </div>
   </div>
 </section>

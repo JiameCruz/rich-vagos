@@ -1,11 +1,78 @@
 ---
-import CTA from '../Widgets/CTA.astro';
+import CTA from "../Widgets/CTA.astro";
 ---
-<section class="bg-red-500 w-full h-96 flex justify-center items-center shadow-md">
-    <div class="container mx-auto flex flex-col ">
-       <h1 class="text-4xl font-bold m-4">Hero</h1>
-       <p class="text-lg m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-       <CTA>Agenda una Cita</CTA>
+
+<section
+  class="relative w-full min-h-screen flex items-center pt-20 bg-zinc-950 overflow-hidden"
+>
+  <!-- Background Elements -->
+  <div class="absolute inset-0 z-0">
+    <!-- Texture / Image Placeholder (Imagine a high-res gritty street photo) -->
+    <div
+      class="absolute inset-0 bg-[url('/hero.png')] bg-cover bg-center opacity-30 mix-blend-luminosity grayscale"
+    >
     </div>
-    <img src="/hero.png" alt="Hero" class="w-1/2 h-1/2 shadow-md rounded-e-4xl" />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"
+    >
+    </div>
+    <!-- Red Accent Glow -->
+    <div
+      class="absolute -left-20 top-1/4 w-96 h-96 bg-red-600/20 blur-[120px] rounded-full"
+    >
+    </div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="container mx-auto px-8 relative z-10">
+    <div class="max-w-4xl space-y-10">
+      <!-- Label -->
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-12 bg-red-600"></div>
+        <span class="text-red-600 font-black uppercase tracking-[0.4em] text-xs"
+          >The Gold Standard in Truck Wash</span
+        >
+      </div>
+
+      <!-- Main Headline -->
+      <h1
+        class="text-7xl md:text-[11rem] font-black text-white uppercase italic tracking-tighter leading-[0.75]"
+      >
+        Rich <br />
+        <span class="text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,0.3)]"
+          >Vagos</span
+        >
+      </h1>
+
+      <!-- Sub-headline -->
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center gap-8 pt-8"
+      >
+        <p
+          class="text-zinc-400 text-xl md:text-2xl font-medium max-w-lg leading-tight border-l-4 border-zinc-800 pl-6"
+        >
+          No es solo un lavado. Es el respeto por tu máquina. Cuidado de flota
+          con actitud de calle y calidad de exhibición.
+        </p>
+
+        <!-- Interactive CTA Section -->
+        <div class="flex flex-wrap gap-4">
+          <CTA variant="primary">Agendar Ahora</CTA>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative "VAGO" Text -->
+  <div
+    class="absolute bottom-10 right-10 flex flex-col items-end opacity-20 pointer-events-none select-none"
+  >
+    <span
+      class="text-[12rem] font-black text-zinc-800 italic leading-none -mb-12"
+      >TRUCK</span
+    >
+    <span class="text-[12rem] font-black text-red-900 italic leading-none"
+      >ELITE</span
+    >
+  </div>
 </section>
