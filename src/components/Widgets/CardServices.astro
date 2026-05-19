@@ -1,32 +1,32 @@
 ---
 const services = [
   { 
-    title: "Lavado Integral", 
+    title: "Lavado Interior y Exterior", 
     description: "Limpieza profunda de interiores y exteriores con acabado espejo.",
     icon: "truck" 
   },
   {
-    title: "Limpieza de Motor",
+    title: "Lavado de Alta Presión",
     description: "Desengrasado seguro para componentes sensibles y mayor vida útil.",
     icon: "engine"
   },
   {
-    title: "Detallado Cabina",
+    title: "Lavado Interior Detallado",
     description: "Desinfección y restauración de plásticos para un ambiente premium.",
     icon: "cabin"
   },
   { 
-    title: "Lavado Chasis", 
+    title: "Limpieza de Rines y Llantas", 
     description: "Eliminación de corrosión y suciedad acumulada en la base.",
     icon: "chassis"
   },
   {
-    title: "Pulido Pintura",
+    title: "Desengrasado de Motor",
     description: "Eliminación de rayas y restauración del brillo original.",
     icon: "polish"
   },
   {
-    title: "Sanitización",
+    title: "Acabo Premium y Protección",
     description: "Eliminación de olores y bacterias con ozono de grado médico.",
     icon: "clean"
   },
@@ -39,7 +39,7 @@ const services = [
       class="group relative overflow-hidden bg-zinc-50 border border-zinc-100 p-8 hover:bg-zinc-950 transition-all duration-500 aspect-square flex flex-col justify-between"
     >
       <!-- Background Text / Number -->
-      <span class="absolute -right-4 -bottom-8 text-[12rem] font-black text-zinc-100 group-hover:text-zinc-900 transition-colors duration-500 leading-none">
+      <span class="absolute -right-4 -bottom-8 text-[12rem] font-black text-zinc-300 group-hover:text-zinc-900 transition-colors duration-500 leading-none">
         0{index + 1}
       </span>
 
@@ -55,9 +55,6 @@ const services = [
       </div>
 
       <div class="relative z-10">
-        <p class="text-zinc-500 font-medium group-hover:text-zinc-400 transition-colors duration-500 max-w-[200px]">
-          {item.description}
-        </p>
         <div class="mt-6 w-0 group-hover:w-full h-1 bg-red-600 transition-all duration-700"></div>
       </div>
     </div>
